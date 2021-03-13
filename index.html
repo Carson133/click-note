@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +9,33 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>clicknote</title>
 </head>
+
 <body>
+
     <header>
-        <div class="top-bar align-center">
+        <nav class="top-bar align-center">
             <h1>clicknote</h1>
-        </div>
+        </nav>
     </header>
 
     <main class="grid-x align-center">
-        <section class="large-6 cell note-area">
+        <section class="medium-6 cell note-area">
             <div class="grid-x align-center input-group">
-                <textarea class="large-10 input-group-field" id=note-area placeholder="Take notes here" rows="3"></textarea>
-                <button class="large-2 button input-group-button" id=submit-button type="reset">Submit</button>
+                <textarea class="medium-10 input-group-field" id=note-area placeholder="Take notes here" rows="3"></textarea>
+                <button class="medium-2 button secondary input-group-button" id=submit-button type="submit">Save</button>
             </div>
         </section>
-
-        <aside class="large-6 cell list-area">
-            <section class="list">
-                <p>this is the "aside" class, this text is a placeholder for visual aid in styling</p>
-            </section>
-            <section class="stocks">
-                
-            </section>
+        <aside class="medium-6 cell list-area">
+            <section class="list"></section>
         </aside>
     </main>
 
     <footer>
-        
+            <section class="app"> 
+                <h3 id="temp-main">0°</h3>
+                <h3 id="condition">unknown</h3>
+            </section>
     </footer>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -46,6 +44,7 @@
     <script src="assets/js/foundation.js"></script>
     <script src="assets/js/script.js"></script>
     <script>$(document).foundation();</script>
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script>
         function addDarkmodeWidget() {
@@ -54,4 +53,5 @@
         window.addEventListener('load', addDarkmodeWidget);
     </script> -->
 </body>
+
 </html>

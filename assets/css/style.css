@@ -1,40 +1,40 @@
-
+.top-bar {
+    margin: 20px;
+    border-radius: 15px;
+}
 
 textarea {
     resize: none;
 }
 
-.note-area {
-    padding: 20px;
+#submit-button {
+    margin: 0px;
 }
 
-.list-area {
+.note-area, .list-area {
     padding: 20px;
 }
 
 .list-items {
-    color: green;
+    color: black;
 }
+
 
 .list-items:hover{
     cursor: pointer;
     color: red;
 }
 
-/* #delButton{
-    float:left;
-    margin: 0;
-    border: black solid 1px;
-    border-radius: 100px;
-    margin-right: 10px;
-    background-color: grey;
-}
-
-#delButton:hover{
-    cursor: pointer;
-    background-color: darkgray;
-} */
-
 #submit-button {
     margin: 0px;
+
+.list {
+    margin-bottom: 40px;
+}
+
+.app {
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
 }
