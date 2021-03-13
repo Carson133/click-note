@@ -19,6 +19,15 @@ textarea {
     color: black;
 }
 
+
+.list-items:hover{
+    cursor: pointer;
+    color: red;
+}
+
+#submit-button {
+    margin: 0px;
+
 .list {
     margin-bottom: 40px;
 }

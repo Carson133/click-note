@@ -1,37 +1,44 @@
-var previousNotes = [];
-
 function appendNoteAndDate(){
+    $(".list").append($("<p>").attr('class', 'list-items').html('Getting Date and Time - Please Wait'));
     $.ajax({
-        url: "http://worldtimeapi.org/api/timezone/America/Los_Angeles" ,
+        url: "https://worldtimeapi.org/api/timezone/America/Los_Angeles" ,
         method: "GET"
     }) .then(function (response){
-        let time = response.datetime.slice(0,16)
+        let time = response.datetime.slice(0,16);
+        time = time.replace('T',' ');
         let input = $('#note-area').val();
     
         function keyNumber(){
             if(localStorage.length === 0){
                 return '0';
             } else {
-                return localStorage.length / 2;
-            } 
+                return localStorage.length + 1;
+            }
         }
         let key = keyNumber();
 
-        console.log(key)
-        console.log(keyNumber())
+        console.log(key);
+        console.log(keyNumber());
 
-        localStorage.setItem(key, input)
-        localStorage.setItem('time'+key, time.replace('T',' '))
+        localStorage.setItem(key, time+" | "+input);
+        // localStorage.setItem('time'+key, time.replace('T',' '))
 
-        $(".list").append($("<p>").attr('class', 'list-items').attr('id', key).html(time.replace('T',' ')+" | "+ input));
+        // $(".list").append($("<p>").attr('class', 'delete-button').attr('id', 'delButton').html('X'));
+        $(".list").append($("<p>").attr('class', 'list-items').attr('id', key).html(time+" | "+ input));
+        location.reload();
     })
 }
 
-for(let i = 0; i < localStorage.length / 2; i++){
-    let localTime = localStorage.getItem('time'+i.toString())
-    let localInput = localStorage.getItem(i.toString())
-
-    $(".list").append($("<p>").attr('class', 'list-items').attr('id', i.toString()).html(localTime +" | "+ localInput));
+for(let i = 0; i < localStorage.length; i++){
+    let keyName = localStorage.key(i)
+    let tempNum = localStorage.length
+    let keyNum = tempNum.toString();
+    console.log(keyNum)
+    let localTimeInput = localStorage.getItem(keyName)
+    console.log(localStorage)
+    console.log(localTimeInput)
+    // $(".list").append($("<p>").attr('class', 'delete-button').attr('id', 'delButton').html('X'));
+    $(".list").append($("<p>").attr('class', 'list-items').attr('id', i.toString()).html(localTimeInput));
 }
 
 
@@ -39,6 +46,16 @@ $('#submit-button').on("click", function() {
     appendNoteAndDate();
 })
 
+
+$('.list-items').on("click", function() {
+    var clickedItem = $(this).attr('id');
+    clickedItem = JSON.parse(clickedItem);
+    let clickedKey = localStorage.key(clickedItem)
+    console.log(clickedKey);
+    localStorage.removeItem(clickedKey);
+    location.reload();
+})
+=======
 $(document).ready(function(){
     function getLocation(){
         if(navigator.geolocation){
@@ -52,7 +69,7 @@ function getWeather(position){
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
     let API_KEY = "3c08c223f7924790dbebee106b70e779";
-    let baseURL = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${API_KEY}`;
+    let baseURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${API_KEY}`;
 
     $.get(baseURL,function(res){
         let data = res.current;
@@ -66,3 +83,4 @@ function getWeather(position){
 
 getLocation();
 })
+
