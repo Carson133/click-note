@@ -1,28 +1,71 @@
 
-.tickit {
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.8;
-    -webkit-transition: opacity .5s ease-in-out, width .5s ease-in-out;
-    transition: opacity .5s ease-in-out, width .5s ease-in-out;
-    width: 170px;
-    z-index: 1030;
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1{
+    content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4em;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 30;
+    text-shadow: .25rem .25rem 0 rgba(#000000, .75);
   }
   
-  .tickit-inner {
-    background: #333;
-    color: #fff;
-    height: 24px;
-    max-width: 200px;
-    overflow: hidden;
-    padding: 3px 8px;
-    text-align: left;
-    text-decoration: none;
-  }
-  
-  .tickit-text {
-    -webkit-transition-duration: .25s;
-            transition-duration: .25s;
-    -webkit-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
-  }
+.top-bar {
+    margin: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+}
+
+textarea {
+    resize: none;
+}
+
+#submit-button {
+    margin: 0px;
+}
+
+.note-area, .list-area {
+    padding: 20px;
+}
+
+.list-items {
+    color: black;
+}
+
+.list {
+    margin-bottom: 40px;
+}
+
+.app {
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    background-color: #89DBEC;
+    background-position: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
