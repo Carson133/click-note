@@ -52,9 +52,9 @@ textarea {
     padding: 20px;
 }
 
-.list-items {
+/* .list-items {
     color: black;
-}
+} */
 
 .list {
     margin-bottom: 40px;
@@ -62,10 +62,9 @@ textarea {
 
 .app {
     border-radius: 15px;
-    text-align: center;
-    position: relative;
     padding: 30px;
-    background-color: #89DBEC;
-    background-position: center;
-    font-family: 'Josefin Sans', sans-serif;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
