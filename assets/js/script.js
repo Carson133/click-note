@@ -55,7 +55,7 @@ $('.list-items').on("click", function() {
     localStorage.removeItem(clickedKey);
     location.reload();
 })
-=======
+
 $(document).ready(function(){
     function getLocation(){
         if(navigator.geolocation){
