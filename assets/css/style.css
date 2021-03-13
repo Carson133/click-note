@@ -16,6 +16,25 @@ textarea {
     color: green;
 }
 
+.list-items:hover{
+    cursor: pointer;
+    color: red;
+}
+
+/* #delButton{
+    float:left;
+    margin: 0;
+    border: black solid 1px;
+    border-radius: 100px;
+    margin-right: 10px;
+    background-color: grey;
+}
+
+#delButton:hover{
+    cursor: pointer;
+    background-color: darkgray;
+} */
+
 #submit-button {
     margin: 0px;
 }
