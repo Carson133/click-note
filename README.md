@@ -21,7 +21,7 @@ For further instructions, visit https://help.github.com.
 
 ## Usage
 
-Type notes you want to take down in the text box and click the "save" button, they will be saved locally and appear to the right. Click the "x" button to delete notes. The weather widget appears below the saved notes.
+Type notes you want to take down in the text box and click the "save" button or press enter, they will be saved locally and appear to the right. To delete a note you just have to hover over it and when it turns red, click. The weather widget appears below.
 
 ![Deployed](assets/images/deployed.png)
 
