@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Click Note Taker</title>
+    <title>clicknote</title>
 </head>
 <body>
     <header>
-
+        <div class="top-bar align-center">
+            <h1>clicknote</h1>
+        </div>
     </header>
 
     <main class="grid-x align-center">
         <section class="large-6 cell note-area">
-            <div class="grid-x align-center">
-                <div class="large-12 cell">
-                    <h2>Take Notes Here:</h2>
-                </div>
-                <textarea class="large-10" id=note-area></textarea>
-                <button class="large-2 button" id=submit-button type="submit">Submit</button>
+            <div class="grid-x align-center input-group">
+                <textarea class="large-10 input-group-field" id=note-area placeholder="Take notes here" rows="3"></textarea>
+                <button class="large-2 button input-group-button" id=submit-button type="submit">Submit</button>
             </div>
         </section>
 
         <aside class="large-6 cell list-area">
             <section class="list">
-
+                <p>this is the "aside" class, this text is a placeholder for visual aid in styling</p>
             </section>
             <section class="stocks">
 
@@ -41,7 +40,7 @@
 
 
     <script src="assets/js/script.js"></script>
-    <script src = "assets/js/index-js.js"></script>
+    <script src="assets/js/index-js.js"></script>
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/foundation.js"></script>
     <script src="assets/js/index-js.js"></script>

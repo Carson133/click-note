@@ -1,0 +1,17 @@
+
+
+textarea {
+    resize: none;
+}
+
+.note-area {
+    padding: 20px;
+}
+
+.list-area {
+    padding: 20px;
+}
+
+#submit-button {
+    margin: 0px;
+}
