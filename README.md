@@ -5,9 +5,9 @@
 
 This is a simple note taking application that also features a weather widget displaying the local temperature and weather conditions.
 
-Link to page: [clicknote](https://github.com/Carson133/click-note)
+Link to page: [clicknote](https://carson133.github.io/click-note)
 
-https://carson133.github.io/click-note
+https://github.com/Carson133/click-note
 
 
 ## Installation
