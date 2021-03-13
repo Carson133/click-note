@@ -46,6 +46,13 @@ $('#submit-button').on("click", function() {
     appendNoteAndDate();
 })
 
+$('#note-area').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+        appendNoteAndDate();
+    }
+});
+
 
 $('.list-items').on("click", function() {
     var clickedItem = $(this).attr('id');
