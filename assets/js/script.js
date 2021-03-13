@@ -55,7 +55,7 @@ $('.list-items').on("click", function() {
     localStorage.removeItem(clickedKey);
     location.reload();
 })
-=======
+
 $(document).ready(function(){
     function getLocation(){
         if(navigator.geolocation){
@@ -76,7 +76,7 @@ function getWeather(position){
         let temp = Math.floor(data.temp - 273);
         let condition = data.weather[0].description;
 
-        $('#temp-main').html(`${temp}°`);
+        $('#temp-main').html(`${temp}° C`);
         $('#condition').html(condition);
     })    
 }
